@@ -1,0 +1,201 @@
+@import url('plugins/jquery-ui.css');@import url('plugins/daterangepicker.css');@import url('plugins/uniform.css');@import url('plugins/tagsinput.css');@import url('plugins/select2.css');@import url('plugins/duallistbox.css');@import url('plugins/datatables_bootstrap.css');@import url('plugins/datatables.css');@import url('plugins/pickadate.css');@import url('plugins/bootstrap-colorpicker.css');@import url('plugins/typeahead.css');@import url('plugins/fullcalendar.css');@import url('plugins/nestable.css');@import url('plugins/bootstrap-wysihtml5.css');@import url('plugins/bootstrap-multiselect.css');@import url('plugins/nprogress.css');@import url('plugins/bootstrap-wizard.css');@import url('plugins/bootstrap-switch.css');
+
+
+
+
+
+
+
+
+
+<!-- calculater -->
+
+button {
+    border:0;
+    color:#fff;
+}
+
+#result {
+    display:block;
+    font-family: sans-serif;
+    width:91%;
+    height:60px;
+    margin:0 0 10px auto;
+    text-align: right;
+    border:1px solid #000;
+    background:#d2d2d2;
+    color:#fff;
+  
+    font-size:25px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+   
+}
+
+#result:hover {
+    
+    cursor: text;
+    
+}
+
+#first-rows {
+    margin-bottom: 20px;
+    position: relative;
+    top:10px;
+}
+
+.rows {
+    width:auto;
+    margin-top:10px;
+}
+
+#delete {
+    width:46%;
+    height:50px;
+    margin-left:25px;
+    border-radius:4px;
+}
+
+/* Aligning the division and dot button properly */
+.fall-back {
+    margin-left:3px !important;
+}
+
+/* Aligning the addition and equals to button properly */
+.align {
+    margin-left: 6px !important;
+}
+
+/* Button styling */
+.btn-style {
+    width:17%;
+    height:62px;
+    margin-left:5px;
+   
+}
+
+.eqn {
+    width:22%;
+    height:50px;
+    margin-left:5px;
+    border-radius:4px;
+}
+
+.first-child {
+ margin-left:25px;
+}
+
+
+/* Adding background color to the number values */
+ .num-bg {
+    background:#ffd444;
+    color:#ooo;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    
+}
+
+ .num-bg:active {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    box-shadow: inset 5px 5px 5px #555;
+}
+
+/*Adding background color to the operator values */ 
+.opera-bg {
+    background:#ffd444;
+    color:#000;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #555;
+}
+
+.opera-bg:active {
+    background:#333;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #555;
+}
+
+/*Adding a background color to the delete button */
+.del-bg {
+    background:#ffd444;
+    color:#000;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #000;
+}
+
+.del-bg:active {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #399cb9;
+}
+
+/*Adding a background color to the equals to button */
+#eqn-bg {
+    background:#ffd444;
+    color:#000;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #000;
+}
+
+#eqn-bg:active {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #1f7a29;
+}
+
+@-webkit-keyframes bgChange {
+    0% {
+       background:#24b4de; 
+    }
+    
+    50% {
+      background:#17a928;
+    }
+    
+    100% {
+        background:#399cb9;
+    }
+}
+@media (max-width:767px){
+		#delete {
+    width:43%;
+   
+}
+
+
+
+/* Button styling */
+.btn-style {
+    width:16%;
+    
+}
+
+.eqn {
+    width:20%;
+    
+}
+
+	
+	}

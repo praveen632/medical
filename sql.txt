@@ -1,0 +1,179 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 15, 2017 at 04:23 PM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 5.6.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `medical`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_company`
+--
+
+CREATE TABLE `m_company` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `created_at` date NOT NULL,
+  `updated_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_productuniform`
+--
+
+CREATE TABLE `m_productuniform` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `created_at` date NOT NULL,
+  `updated_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_product_type`
+--
+
+CREATE TABLE `m_product_type` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `product_uniform` varchar(50) NOT NULL,
+  `created_at` date NOT NULL,
+  `updated_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `m_tax`
+--
+
+CREATE TABLE `m_tax` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `tax_rate` int(11) NOT NULL,
+  `created_at` date NOT NULL,
+  `updated_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `m_tax`
+--
+
+INSERT INTO `m_tax` (`id`, `name`, `tax_rate`, `created_at`, `updated_at`) VALUES
+(1, 'fdgfds', 0, '0000-00-00', '0000-00-00'),
+(2, 'simmi', 12, '0000-00-00', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `phone` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `username`, `email`, `password`, `phone`) VALUES
+(1, 'admin', 'admin', 'agtrf@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '9411255215'),
+(17, 'anand', 'anand', 'anandpaliwalvs@gmail.com', 'b59c67bf196a4758191e42f76670ceba', '1111111111'),
+(18, 'web', 'webi', 'anujprajapati930390@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '9718762022'),
+(19, 'aa', 'aa', 'ad@gmail.com', '4124bc0a9335c27f086f24ba207a4912', 'qazxsdcf'),
+(20, 'we', 'wer', 'wer@wer.com', '202cb962ac59075b964b07152d234b70', '9411255215'),
+(21, 'Tan', 'Wilson', 'boonchong@ahseng.com', '202cb962ac59075b964b07152d234b70', '1234567890'),
+(22, 'swati', 'swati17', 'sinhaswati583@gmail.com', 'c33ade4e16434e64b84b6edc093982e4', '8447902806');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `m_company`
+--
+ALTER TABLE `m_company`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_productuniform`
+--
+ALTER TABLE `m_productuniform`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_product_type`
+--
+ALTER TABLE `m_product_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `m_tax`
+--
+ALTER TABLE `m_tax`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `m_company`
+--
+ALTER TABLE `m_company`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `m_productuniform`
+--
+ALTER TABLE `m_productuniform`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `m_product_type`
+--
+ALTER TABLE `m_product_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `m_tax`
+--
+ALTER TABLE `m_tax`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
